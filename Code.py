@@ -46,31 +46,31 @@ def main():
             st.warning("Invalid credentials. Please try again.")
 
     elif choice == "Grid Management":
-    st.header("Grid Management")
-    st.markdown("Optimizing energy distribution for a sustainable future")
+        st.title("Grid Management")
+        st.markdown("Optimizing energy distribution for a sustainable future")
 
-    # Load energy demand data
-    energy_demand_df = generate_energy_demand()
+        # Load energy demand data
+        energy_demand_df = generate_energy_demand()
 
-    # User input for real-time optimization
-    user_input = st.slider("Adjust Demand (MW)", min_value=0, max_value=1000, value=500)
+        # User input for real-time optimization
+        user_input = st.slider("Adjust Demand (MW)", min_value=0, max_value=1000, value=500)
 
-    # Predicted demand
-    predicted_demand = user_input * 0.9  # Placeholder prediction (adjust as needed)
+        # Predicted demand
+        predicted_demand = user_input * 0.9  # Placeholder prediction (adjust as needed)
 
-    st.subheader("Real-Time Energy Distribution")
-    st.markdown(f"Predicted Demand: {predicted_demand:.2f} MW")
+        st.subheader("Real-Time Energy Distribution")
+        st.markdown(f"Predicted Demand: {predicted_demand:.2f} MW")
 
-    # Display energy demand chart
-    st.subheader("Hourly Energy Demand")
-    st.line_chart(energy_demand_df.set_index("Hour"))
+        # Display energy demand chart
+        st.subheader("Hourly Energy Demand")
+        st.line_chart(energy_demand_df.set_index("Hour"))
 
-    # Placeholder renewable energy integration
-    st.subheader("Renewable Energy Sources")
-    st.markdown("Integrating solar and wind power seamlessly...")
+        # Placeholder renewable energy integration
+        st.subheader("Renewable Energy Sources")
+        st.markdown("Integrating solar and wind power seamlessly...")
 
-    st.markdown("---")
-    st.markdown("This is an example. In practice, you'd use real data, more sophisticated models, and optimization algorithms for smart grid management.")
-    
+        st.markdown("---")
+        st.markdown("This is an example. In practice, you'd use real data, more sophisticated models, and optimization algorithms for smart grid management.")
+
 if __name__ == "__main__":
     main()
