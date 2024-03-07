@@ -46,7 +46,7 @@ def main():
             st.warning("Invalid credentials. Please try again.")
 
     elif choice == "Grid Management":
-    st.title("Grid Management")
+    st.header("Grid Management")
     st.markdown("Optimizing energy distribution for a sustainable future")
 
     # Load energy demand data
